@@ -27,7 +27,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 urllib3.disable_warnings()
 
 # verze programku a cislo buildu
-version = "4.3.0"
+version = "1.3.0"
 build = 8
 
 startchanger = timer()
