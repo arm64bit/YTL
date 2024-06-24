@@ -1305,7 +1305,7 @@ usage: ipchanger.exe [-a AUTO] [-d] [-m 1-100] [-p] [-c COUNTRY] [-b] [-n] [-u]
     # funkce na zobrazeni zpravy dne
     def motd(self):
         http = urllib3.PoolManager(cert_reqs='CERT_NONE', assert_hostname=False)
-        r = http.request('GET', 'https://raw.githubusercontent.com/seevik2580/tor-ip-changer/master/motd.txt')
+        r = http.request('GET', 'https://raw.githubusercontent.com/arm64bit/YTL/master/motd.txt')
         obsah = r.data.decode('utf-8')
         self.write(obsah, 'white', 1)
 
@@ -1313,7 +1313,7 @@ usage: ipchanger.exe [-a AUTO] [-d] [-m 1-100] [-p] [-c COUNTRY] [-b] [-n] [-u]
     def changelog(self):
         http = urllib3.PoolManager(cert_reqs='CERT_NONE', assert_hostname=False)
         r = http.request('GET',
-                         'https://raw.githubusercontent.com/seevik2580/tor-ip-changer/master/dist/' + version + '/changelog')
+                         'https://raw.githubusercontent.com/arm64bit/YTL/master/dist/' + version + '/changelog')
         obsah = r.data.decode('utf-8')
         self.write(obsah, 'orange', 1)
 
@@ -1922,7 +1922,7 @@ usage: ipchanger.exe [-a AUTO] [-d] [-m 1-100] [-p] [-c COUNTRY] [-b] [-n] [-u]
             if self.noUpdate is False:
                 self.write('This version:            %s-%s\n' % (version, build), "white", 1)
                 http = urllib3.PoolManager(cert_reqs='CERT_NONE', assert_hostname=False)
-                f = http.request('GET', 'https://raw.githubusercontent.com/seevik2580/tor-ip-changer/master/version.txt')
+                f = http.request('GET', 'https://raw.githubusercontent.com/arm64bit/YTL/master/version.txt')
                 self.lastver = f.data.decode('utf-8')
                 url = "https://raw.githubusercontent.com/seevik2580/tor-ip-changer/master/dist/%s/dist.txt" % self.lastver
                 u = url.replace("\n", "")
