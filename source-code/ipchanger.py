@@ -80,7 +80,7 @@ class IpChanger(Tk):
         ######### ZACATEK PROMENNYCH
         # definice pro aplikaci, nazev, ruzne hodnoty
         global start
-        self.title("TOR IP Changer | Created by Seva | v%s-%s" % (version, build))
+        self.title("YTV IP Changer | Created by Mahfuz AnonymousPro | v%s-%s" % (version, build))
         self.host = StringVar()
         self.port = IntVar()
         self.proxy = IntVar()
